@@ -7,13 +7,14 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Switch from '@mui/material/Switch';
+import { handleTurnOnValve } from '../Utils/Valve'
 
 
 const Valves = ({ valves }) => {
     
-function createData(name, zone, type, status ) {
-    return { name, zone, type, status };
-  }
+// function createData(name, zone, type, status ) {
+//     return { name, zone, type, status };
+//   }
   
 //   const rows = [
 //     createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
@@ -22,6 +23,10 @@ function createData(name, zone, type, status ) {
 //     createData('Cupcake', 305, 3.7, 67, 4.3),
 //     createData('Gingerbread', 356, 16.0, 49, 3.9),
 //   ];
+  const handleValveTurnOn = (e, valve) => {
+
+  }
+
   return (
     <div className='flex flex-col gap-[30px] mt-[50px]'>
        
@@ -47,7 +52,7 @@ function createData(name, zone, type, status ) {
                 {row.name}
               </TableCell>
               <TableCell align="right">{row.zone}</TableCell>
-              <TableCell align="center"><Switch /></TableCell>
+              <TableCell align="center" ><Switch onChange={(e)=>handleTurnOnValve(row.name.toLowerCase(), e.target.checked) } /></TableCell>
               <TableCell align="left" sx={{ color : "var(--brown-color)" }}>{row.status}</TableCell>
             </TableRow>
           ))}

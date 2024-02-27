@@ -17,17 +17,17 @@ const Home = () => {
     },]
 
     const valves = [{
-        name : "Front Yard",
+        name : "valve1",
         zone : "1",
         type : false,
         status : "Running",
     }, {
-        name : "Back Yard",
+        name : "valve2",
         zone : "2",
         type : false,
         status : "Idle",
     }, {
-        name : "Side Yard",
+        name : "valve3",
         zone : "3",
         type : false,
         status : "Running",

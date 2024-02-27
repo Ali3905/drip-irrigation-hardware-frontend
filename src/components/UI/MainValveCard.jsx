@@ -1,5 +1,6 @@
 import { Switch } from '@mui/material'
 import React from 'react'
+import { handleTurnOnValve } from '../../Utils/Valve'
 
 const MainValveCard = () => {
   return (
@@ -8,7 +9,7 @@ const MainValveCard = () => {
             <p className='big_text'>Main Motor</p>
             <p className='medium_text text-[color:var(--brown-color)]'>Turn the main motor on or off</p>
         </span>
-        <Switch />
+        <Switch onChange={(e)=>handleTurnOnValve("Main", e.target.checked) } />
     </div>
   )
 }

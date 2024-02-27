@@ -6,7 +6,7 @@ const WateringSchedule = ({ waterings }) => {
         <h2 className='big_text'>Watering Schedule</h2>
         {
             waterings.map((watering)=>{
-                return <div className='py-4 flex flex-col gap-2'>
+                return <div className='py-4 flex flex-col gap-2' key={watering.farm} >
                     <p className='medium_text'>{watering.farm}</p>
                     <p className='text-[color:var(--brown-color)] medium_text' >Every day at {watering.time}</p>
                 </div>
